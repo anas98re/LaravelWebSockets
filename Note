@@ -1,0 +1,5 @@
+Require the Laravel WebSockets package. It works as a replacement for external services like Pusher. Many settings will refer to Pusher today but be reminded that we are not using it. We want our own solution.
+
+Next, adapt your .env file. We want the BROADCAST_DRIVER to be pusher.
+
+We can define all those values ourselves. We are not actually using Pusher, but the package uses these keys, making replacing Pusher (if you use it) as simple as possible.
