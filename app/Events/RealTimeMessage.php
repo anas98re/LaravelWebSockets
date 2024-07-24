@@ -2,6 +2,7 @@
 
 namespace App\Events;
 
+use BeyondCode\LaravelWebSockets\WebSockets\Channels\PrivateChannel;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Queue\SerializesModels;
@@ -17,8 +18,15 @@ class RealTimeMessage implements ShouldBroadcast
         $this->message = $message;
     }
 
-    public function broadcastOn(): Channel
+    //private Channel
+    public function broadcastOn()
     {
-        return new Channel('events');
+        return new PrivateChannel('events');
     }
+
+    //public Channel
+    // public function broadcastOn(): Channel
+    // {
+    //     return new Channel('events');
+    // }
 }
