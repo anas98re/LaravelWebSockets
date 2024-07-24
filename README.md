@@ -25,5 +25,16 @@ php artisan websockets:serve
 
 
 
+* There are two ways we can send messages from our backend to the WebSockets server:
+
+Laravel Events
+Laravel Notifications
+we will use event:
+Let's create a new event with artisan.
+- php artisan make:event RealTimeMessage
+
+
+
+
 
 
